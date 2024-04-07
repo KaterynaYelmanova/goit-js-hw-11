@@ -1,5 +1,3 @@
-import { galleryList } from '../main';
-
 export function fetchImages(query) {
   query = encodeURIComponent(query);
 
@@ -14,6 +12,6 @@ export function fetchImages(query) {
       }
     })
     .catch(error => {
-      console.error('Помилка запиту:', error);
+      console.error('Помилка запиту:', error.message);
     });
 }
